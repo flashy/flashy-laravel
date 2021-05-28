@@ -1,8 +1,6 @@
 # Flashy Laravel Wrapper
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/flashy/flashy-laravel.svg?style=flat-square)](https://packagist.org/packages/flashy/flashy-laravel)
-[![Total Downloads](https://img.shields.io/packagist/dt/flashy/flashy-laravel.svg?style=flat-square)](https://packagist.org/packages/flashy/flashy-laravel)
-![GitHub Actions](https://github.com/flashy/flashy-laravel/actions/workflows/main.yml/badge.svg)
 
 A Flashy PHP SDK wrapper for Laravel 8+.
 
