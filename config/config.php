@@ -5,6 +5,6 @@
  */
 return [
 
-    'api_key' => env('DEFAULT_KEY', 'FLASHY_API_KEY'),
+    'api_key' => env('FLASHY_API_KEY'),
 
 ];

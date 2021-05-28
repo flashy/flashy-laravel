@@ -9,16 +9,33 @@ class WrapperTest extends TestCase
 {
 
     /**
+     * @var \Flashy\Flashy
+     */
+    private $api;
+
+    /**
+     * @throws FlashyException
+     */
+    public function init()
+    {
+        $this->api = new \Flashy\Flashy(['api_key' => 'FLASHY_API_KEY']);
+
+        config()->set('flashy', [
+            'api_key' => 'FLASHY_API_KEY'
+        ]);
+    }
+
+    /**
      * @test
      * @throws FlashyException
      */
     public function get_flashy_contacts()
     {
-        $api = new \Flashy\Flashy(['api_key' => 'FLASHY_API_KEY']);
+        $this->init();
 
         $contacts = Flashy::contacts();
 
-        $this->assertEquals($contacts, $api->contacts);
+        $this->assertEquals($contacts, $this->api->contacts);
     }
 
     /**
@@ -27,11 +44,11 @@ class WrapperTest extends TestCase
      */
     public function get_flashy_account()
     {
-        $api = new \Flashy\Flashy(['api_key' => 'FLASHY_API_KEY']);
+        $this->init();
 
         $contacts = Flashy::account();
 
-        $this->assertEquals($contacts, $api->account);
+        $this->assertEquals($contacts, $this->api->account);
     }
 
 }
