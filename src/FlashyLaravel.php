@@ -11,7 +11,7 @@ class FlashyLaravel
     /**
      * @var Flashy
      */
-    private $api;
+    public $api;
 
     /**
      * FlashyLaravel constructor.
