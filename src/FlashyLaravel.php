@@ -20,6 +20,11 @@ class FlashyLaravel
     public function __construct()
     {
         $this->api = new Flashy(config("flashy"));
+
+        if( config("flashy.base_path") )
+        {
+            $this->api->client->setBasePath(config("flashy.base_path"));
+        }
     }
 
     /**
